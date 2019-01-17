@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Examples</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="" rel="stylesheet">
+</head>
+<body>
+	<div id="canvas-container" align="center">
+    <canvas id="canvas" width="600px" height="400px" style="border-radius: 50%"></canvas>
+</div>
+    <script src="https://cdn.bootcss.com/wordcloud2.js/1.1.0/wordcloud2.js"></script>
+	<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+	<script>
+    var options = eval({
+        "list": [
+            ['E', 6],
+             ['影响决策能力', 6],
+             ['人文类', 6],
+             ['伯乐', 6],
+            ['S', 4],
+            ['T', 4],
+            ['J', 4],
+            
+            ['自信', 3],
+            ['责任', 3],
+           
+            ['自控性', 3],
+            ['组织协调能力', 3],
+           
+            ['人文类', 2],
+            ['人文类', 2],
+            ['人文类', 2],
+            ['人文类', 2],
+            ['人文类', 2],
+            ['人文类', 2],
+            ['人文类', 2],
+            ['人文类', 2],
+            ['人文类', 2],
+            ['人文类', 2],
+            ['人文类', 2],
+            ['人文类', 2],
+            ['人文类', 2],
+            ['人文类', 2],
+            ['人文类', 2],
+        
+        ],
+        "gridSize": 16, // size of the grid in pixels
+        "weightFactor": 10, // number to multiply for size of each word in the list
+        "fontWeight": 'normal', // 'normal', 'bold' or a callback
+        "fontFamily": 'Helvetica Neue, Helvetica, Arial, sans-serif,PingFang-SC-Regular', // font to use
+        "color": 'random-light', // 'random-dark' or 'random-light'
+        "backgroundColor": '#fff', // the color of canvas
+        "figPath":'./path.png'
+        // "rotateRatio": 1 // probability for the word to rotate. 1 means always rotate
+    });
+    var canvas = document.getElementById('canvas');
+    // figPath = system.file("./pat",package = "wordcloud2")
+    WordCloud(canvas, options);
+</script>
+</body>
+</html>
